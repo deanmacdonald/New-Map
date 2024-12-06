@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EUAP Map</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EUPA Map Locations</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com; script-src-elem 'self' https://unpkg.com 'nonce-rAnd0m';" />
 </head>
 <body>
-  <div class="green-stripe"></div>
   <header>
-    <h1 class="map-title">Locations Map</h1>
+    <h1 class="map-title">EUPA Map Locations</h1>
   </header>
-  <div id="map"></div>
+  <main>
+    <div id="map"></div>
+    <div id="directions-controls" class="leaflet-bar leaflet-control">
+      <input type="text" id="start-location" placeholder="Current Location" />
+      <input type="text" id="end-location" placeholder="Destination" />
+      <button onclick="getDirections()">Get Directions</button>
+    </div>
+  </main>
   <footer>
-    <p>&copy; 2024 Edmonton Ultimate Players Association</p>
+    <p>&copy; 2024 EUPA ASSOCIATION</p>
   </footer>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="dist/bundle.js"></script>
+  <script src="bundle.js" nonce="rAnd0m"></script>
 </body>
 </html>

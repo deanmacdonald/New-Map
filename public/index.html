@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EUPA Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="script-src 'self' https://unpkg.com; script-src-elem 'self' https://unpkg.com 'nonce-rAnd0m';"
-    />
-  </head>
-  <body>
-    <div class="green-stripe"></div>
-    <header>
-      <h1 class="map-title">Locations Map</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EUPA Map Locations</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com; script-src-elem 'self' https://unpkg.com 'nonce-rAnd0m';" />
+</head>
+<body>
+  <header>
+    <h1 class="map-title">EUPA Map Locations</h1>
+  </header>
+  <main>
     <div id="map"></div>
-    <button class="controls" onclick="calculateRoute()">Get Directions</button>
-
-    <footer>
-      <p>&copy; 2024 Edmonton Ultimate Players Association</p>
-    </footer>
-    <script nonce="rAnd0m" src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script nonce="rAnd0m" src="dist/bundle.js"></script>
-    <script nonce="rAnd0m" src="js/app.js"></script>
-  </body>
+    <div id="directions-controls" class="leaflet-bar leaflet-control">
+      <input type="text" id="start-location" placeholder="Current Location" />
+      <input type="text" id="end-location" placeholder="Destination" />
+      <button onclick="getDirections()">Get Directions</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 EUPA ASSOCIATION</p>
+  </footer>
+  <script src="bundle.js" nonce="rAnd0m"></script>
+</body>
 </html>
+

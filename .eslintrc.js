@@ -1,9 +1,12 @@
-const { getESLintConfig } = require('@applint/spec');
+const { getESLintConfig } = require('@iceworks/spec');
 
-// https://www.npmjs.com/package/@applint/spec
+// https://www.npmjs.com/package/@iceworks/spec
 module.exports = getESLintConfig('common', {
-  rules: {
-    'no-unused-vars': 'warn',
-    'no-undef': 'warn',
-  },
+  "rules": {
+    "semi": "warn",
+    "eol-last": "warn",
+    "quote-props": "warn",
+    "no-unused-vars": "warn",
+    "dot-notation": "off"
+  }
 });

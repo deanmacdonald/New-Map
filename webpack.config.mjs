@@ -1,24 +1,19 @@
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-module.exports = {
-  // Set the mode to production or development
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
   mode: 'production', // Change to 'development' if needed
-
-  // Enable detailed error information
   stats: {
     errorDetails: true,
   },
-
-  // Entry point of your application
   entry: './public/js/app.js',
-
-  // Output configuration
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public/dist'),
   },
-
-  // Module rules
   module: {
     rules: [
       {
@@ -33,11 +28,9 @@ module.exports = {
       },
     ],
   },
-
-  // Resolve configuration with fallbacks
   resolve: {
     fallback: {
-      'node:url': false, // or use a polyfill if needed
+      'node:url': false,
       url: require.resolve('url/'),
       stream: require.resolve('stream-browserify'),
       buffer: require.resolve('buffer/'),

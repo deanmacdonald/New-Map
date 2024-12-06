@@ -1,6 +1,3 @@
-import L from 'leaflet';
-import 'leaflet-fullscreen';
-
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize the map
   const map = L.map('map').setView([53.5461, -113.4938], 12);
@@ -8,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '© OpenStreetMap contributors'
+    attribution: ' OpenStreetMap contributors',
   }).addTo(map);
 
   // Add fullscreen control
@@ -31,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Placeholder for directions functionality
-    alert(`Getting directions from ${startLocation} to ${endLocation}`);
+    alert(Getting directions from  to );
     // Here you would typically call a directions API to get route details
   }
 });

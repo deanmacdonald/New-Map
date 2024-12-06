@@ -1,61 +1,84 @@
-/* Style for the green stripe */
-.green-stripe {
-  width: 100%;
-  height: 10px;
-  background-color: green;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-/* Style for the map container */
-#map {
-  height: 600px;
-  width: 100%;
-  margin-top: 30px; /* Adjusted to leave space for the header */
-}
-
-/* Style for the map title */
-.map-title {
-  color: green;
-  text-align: center;
-  margin: 20px 0;
-  font-size: 24px;
-}
-
-/* Style for the footer */
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #f1f1f1;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-/* Centering the copyright text */
-footer p {
+body, html {
+  height: 100%;
   margin: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  #map {
-    height: 400px; /* Adjust height for smaller screens */
-  }
-
-  .map-title {
-    font-size: 20px; /* Slightly smaller font for mobile devices */
-  }
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
 }
 
-/* Button hover effect */
-.controls {
-  transition: background-color 0.3s ease;
+header, footer {
+  width: 100%;
+  text-align: center;
 }
 
-.controls:hover {
-  background-color: #ddd;
+header {
+  background-color: #006400;
+  padding: 10px 0;
 }
 
+h1 {
+  color: white;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  border: 2px solid #006400;
+  border-radius: 8px;
+}
+
+#directions-controls {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#directions-controls input {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#directions-controls button {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#directions-controls button:hover {
+  background-color: #004d00;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
